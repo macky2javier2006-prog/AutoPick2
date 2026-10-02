@@ -1,0 +1,171 @@
+/* Mobile Responsive Styles */
+
+/* Ensure viewport is set correctly */
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+/* Base mobile adjustments */
+@media (max-width: 768px) {
+  /* Make sure everything is responsive */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  /* Make containers full width on mobile */
+  [style*="maxWidth: '1200px'"],
+  [style*="maxWidth: '1000px'"],
+  [style*="maxWidth: '900px'"],
+  [style*="maxWidth: '800px'"],
+  [style*="maxWidth: '600px'"] {
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Adjust padding for mobile */
+  [style*="padding: '80px 20px'"],
+  [style*="padding: '60px 20px'"] {
+    padding: 40px 15px !important;
+  }
+
+  [style*="padding: '100px 20px'"] {
+    padding: 60px 15px !important;
+  }
+
+  /* Make grids single column on mobile */
+  [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Adjust gap for mobile */
+  [style*="gap: '40px'"],
+  [style*="gap: '50px'"] {
+    gap: 20px !important;
+  }
+
+  /* Make flex containers wrap */
+  [style*="display: 'flex'"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Adjust carousel for mobile */
+  [style*="width: '960px'"] {
+    width: 100% !important;
+    max-width: calc(100vw - 100px) !important;
+  }
+
+  /* Make cards smaller on mobile */
+  [style*="minWidth: '300px'"] {
+    min-width: 250px !important;
+  }
+
+  /* Adjust arrow buttons */
+  button[style*="width: '40px'"] {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 16px !important;
+  }
+
+  /* Make modal full screen on mobile */
+  [style*="maxWidth: '800px'"][style*="display: 'flex'"] {
+    max-width: 95% !important;
+    flex-direction: column !important;
+    margin: 10px !important;
+  }
+
+  /* Stack modal content vertically */
+  [style*="flex: 1"][style*="padding: '40px'"] {
+    padding: 20px !important;
+  }
+
+  /* Adjust image heights */
+  img[style*="height: '220px'"],
+  img[style*="height: '150px'"] {
+    height: auto !important;
+    max-height: 180px !important;
+  }
+
+  /* Make brand logos smaller */
+  img[style*="height: '45px'"] {
+    height: 35px !important;
+  }
+
+  /* Adjust navigation for mobile */
+  nav[style*="padding: '18px 40px'"] {
+    padding: 12px 15px !important;
+  }
+
+  nav a,
+  nav button {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Hide some navigation items on very small screens */
+  @media (max-width: 480px) {
+    nav a:not(:first-child):not(:nth-child(2)):not(:last-child) {
+      display: none;
+    }
+  }
+
+  /* Make form inputs full width */
+  input,
+  select {
+    width: 100% !important;
+  }
+
+  /* Adjust button sizes */
+  button {
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+  }
+
+  /* Stack price range inputs vertically on very small screens */
+  @media (max-width: 480px) {
+    [style*="display: 'flex'"][style*="gap: '10px'"] div[style*="flex: 1"] {
+      flex: none !important;
+      width: 100% !important;
+    }
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  [style*="maxWidth: '1200px'"] {
+    max-width: 95% !important;
+  }
+
+  [style*="gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr)'"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Ensure touch-friendly buttons */
+@media (pointer: coarse) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
